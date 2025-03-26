@@ -1,35 +1,39 @@
 {
-    "name": "libsodium-full",
-    "version": "1.1",
-    "description": "Stetseds Full Libsodium",
-    "keywords": "libsodium-full",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/Stetsed/libsodium-full.git"
-    },
-    "export": {
-        "include": [
-            "port/*",
-            "port_include/*",
-            "library.json",
-            "README.md",
-            "LICENSE",
-            "libsodium/src/libsodium/*",
-            "libsodium/LICENSE"
-        ]
-    },
-    "license": "MIT",
-    "build": {
-        "includeDir": "libsodium/src/libsodium/include",
-        "srcDir": "libsodium/src/libsodium",
-        "flags": [
-            "-I libsodium/src/libsodium/include/sodium",
-            "-I port_include",
-            "-D CONFIGURED=1",
-            "-Wno-unused-function",
-            "-Wno-unknown-pragmas",
-            "-Wno-unused-variable",
-            "-Wno-type-limits"
-        ]
-    }
+  "name": "libsodium-full",
+  "version": "1.1",
+  "description": "Stetseds Full Libsodium",
+  "keywords": "libsodium-full",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Stetsed/libsodium-full.git"
+  },
+  "export": {
+    "include": [
+      "port/*",
+      "port_include/*",
+      "library.json",
+      "README.md",
+      "LICENSE",
+      "libsodium/src/libsodium/*",
+      "libsodium/LICENSE"
+    ]
+  },
+  "license": "MIT",
+  "build": {
+    "includeDir": "libsodium/src/libsodium/include",
+    "srcDir": "libsodium/src/libsodium",
+    "flags": [
+      "-I libsodium/src/libsodium/include/sodium",
+      "-I port_include",
+      "-D CONFIGURED=1",
+      "-Wno-unused-function",
+      "-Wno-unknown-pragmas",
+      "-Wno-unused-variable",
+      "-Wno-type-limits"
+    ],
+    "srcFilter": [
+      "-<sodium/version.c>",
+      "+<../../port/version.c>"
+    ]
+  }
 }
