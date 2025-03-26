@@ -30,6 +30,6 @@
             "-Wno-unknown-pragmas",
             "-Wno-unused-variable",
             "-Wno-type-limits"
-        ],
+        ]
     }
 }
