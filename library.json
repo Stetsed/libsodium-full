@@ -1,11 +1,11 @@
 {
-    "name": "libsodium",
+    "name": "libsodium-full",
     "version": "1.10018.4",
     "description": "Stetseds Full Libsodium",
-    "keywords": "libsodium",
+    "keywords": "libsodium-full",
     "repository": {
         "type": "git",
-        "url": "https://github.com/esphome/libsodium-esphome.git"
+        "url": "https://github.com/Stetsed/libsodium-full.git"
     },
     "export": {
         "include": [
