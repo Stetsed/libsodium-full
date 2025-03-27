@@ -1,6 +1,6 @@
 {
   "name": "libsodium-full",
-  "version": "1.10001",
+  "version": "1.10009",
   "description": "Stetseds Full Libsodium",
   "keywords": "libsodium-full",
   "repository": {
@@ -32,8 +32,10 @@
       "-Wno-type-limits"
     ],
     "srcFilter": [
-      "-<sodium/version.c>",
-      "+<../../port/version.c>"
+      "-<*>",
+      "+<../../port/version.c>",
+      "+<*>",
+      "-<sodium/version.c>"
     ]
   }
 }
